@@ -15,5 +15,11 @@ schnittpunkt (Gerade m1 n1) (Gerade m2 n2) =
     Punkt ((n1 - n2) / (m2 - m1)) (auswerten (Gerade m1 n1) ((n1 - n2) / (m2 - m1)))
 
  --4.4
-flaechezwischengeraden :: Gerade -> Gerade -> Double -> Double -> Double
-flaechezwischengeraden (Gerade m1 n1) (Gerade m2 n2) x1 x2 = abs ((m1 * 0.5 * x2^2 + n1*x1) + (m1 * 0.5 *x2^2 + n1*x2)) - abs ((m2 * 0.5 * x2^2 + n2*x2) + (m2 * 0.5 * x1^2 + n2*x1))
+flaecheZwischenGeraden :: Gerade -> Gerade -> Double -> Double -> Double
+flaecheZwischenGeraden gerade1 gerade2 a b 
+    let (xSchnittpunkt, ySchnittpunkt) = schnittpunkt gerade1 gerade2
+        fx = auswerten gerade1 x
+        gx = auswerten gerade2 x
+        integrate f a b = (f a + f b) * (b - a) / 2
+        in abs $ integrate (\x -> f x - g x) a xSchnittpunkt + integrate (\x -> g x - f x) xSchnittpunkt b
+
