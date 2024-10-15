@@ -4,8 +4,8 @@ siren 1, 2, Blood curse
 Project Zero/ Fatal Frame 1,2,3
 The Thing
 hitman blood money
-Stay out of the House --check--
-Murder House
+Stay out of the House 
+Murder House --check--
 Glass Staircase
 night ripper
 Deadly Night
@@ -19,7 +19,7 @@ nun massacre
 the booty creek cheek freak
 bloodwash
 bsbh
-day se7en --check--
+day se7en --check--   
 search party & the summoning
 night watch
 scary tales vol. 1
